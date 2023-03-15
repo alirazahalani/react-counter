@@ -1,9 +1,18 @@
 function App() {
   return (
     <div className='App'>
-      <div>
+      <>
         <h1>Hello Counter</h1>
-      </div>
+        <div className='wrapper'>
+          <button>
+            <span className='material-icons'>remove</span>
+          </button>
+          <input type='text' />
+          <button>
+            <span className='material-icons'>add</span>
+          </button>
+        </div>
+      </>
     </div>
   )
 }
