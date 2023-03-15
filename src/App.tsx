@@ -1,14 +1,22 @@
+import { useState } from 'react'
+
 function App() {
+  const [count, setCount] = useState(0)
+
+  function handleClick(amt: number) {
+    setCount((p) => (p += amt))
+  }
+
   return (
     <div className='App'>
       <>
         <h1>Hello Counter</h1>
         <div className='wrapper'>
-          <button>
+          <button onClick={() => handleClick(-1)}>
             <span className='material-icons'>remove</span>
           </button>
-          <input type='text' />
-          <button>
+          <p>{count}</p>
+          <button onClick={() => handleClick(1)}>
             <span className='material-icons'>add</span>
           </button>
         </div>
